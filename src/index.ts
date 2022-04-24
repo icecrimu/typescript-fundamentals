@@ -24,3 +24,21 @@ class Queue<T> {
 }
 
 let queue: Queue<number> = new Queue()
+
+// Array
+let numArray: number[] = [1, 2, 3]
+
+// Usage
+numArray = [1]
+numArray = [1, 2, 3, 4, 5]
+// numArray = ['Hello'] // Error
+
+// Tuple
+let tuple: [number, number] = [0, 0]
+
+// Usage
+tuple = [1, 1]
+tuple = [2, 6]
+// tuple = [5] // Error: must be 2 items
+// tuple = [5,4,3] // Error: must be 2 items
+// tuple = ["yow", 23] // Error: must be number
