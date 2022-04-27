@@ -55,3 +55,11 @@ let unit: Point = {
   x: 1,
   y: 1
 }
+
+// const declarations
+const point: Point = { x: 0, y: 0 }
+
+// point = {x: 1, y: 1} // Error
+
+point.x = 123
+point.y = 456
