@@ -42,3 +42,16 @@ tuple = [2, 6]
 // tuple = [5] // Error: must be 2 items
 // tuple = [5,4,3] // Error: must be 2 items
 // tuple = ["yow", 23] // Error: must be number
+
+// Types and Type Aliases
+type Point = { x: number; y: number }
+
+let center: Point = {
+  x: 0,
+  y: 0
+}
+
+let unit: Point = {
+  x: 1,
+  y: 1
+}
