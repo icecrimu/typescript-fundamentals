@@ -63,3 +63,29 @@ const point: Point = { x: 0, y: 0 }
 
 point.x = 123
 point.y = 456
+
+// Functions
+function add(a: number, b: number): number {
+  return a + b
+}
+
+function log(message: string): void {
+  console.log("LOG:", message)
+}
+
+function sum(...values: number[]) {
+  return values.reduce((previous, current) => {
+    return previous + current
+  })
+}
+
+sum(1, 2) // 3
+sum(1, 2, 3) // 6
+
+type Add = (a: number, b: number) => number
+
+let addNum: Add
+
+addNum = function (a: number, b: number): number {
+  return a + b
+}
