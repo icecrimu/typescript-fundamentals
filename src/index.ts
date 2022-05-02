@@ -89,3 +89,24 @@ let addNum: Add
 addNum = function (a: number, b: number): number {
   return a + b
 }
+
+// Structural Typing
+type User = { id: string }
+type Product = { id: string }
+
+let user: User = { id: "user-asfedfk" }
+let product: Product = { id: "product-dklfdj" }
+
+user = product
+// product = user
+
+type Point2D = { x: number; y: number }
+type Point3D = { x: number; y: number; z: number }
+
+let point2D: Point2D = { x: 0, y: 1 }
+let point3D: Point3D = { x: 0, y: 1, z: 2 }
+
+// Extra info
+point2D = point3D
+function takesPoint2D(point: Point2D) {}
+takesPoint2D(point3D)
