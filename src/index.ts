@@ -110,3 +110,29 @@ let point3D: Point3D = { x: 0, y: 1, z: 2 }
 point2D = point3D
 function takesPoint2D(point: Point2D) {}
 takesPoint2D(point3D)
+
+// Classes
+
+class Animal {
+  // private name: string
+  protected name: string
+
+  constructor(name: string) {
+    this.name = name
+  }
+
+  public move(distanceInMeters: number): void {
+    console.log(`${this.name} moved ${distanceInMeters}m.`)
+  }
+}
+
+let cat = new Animal("Cat")
+
+cat.move(10)
+// cat.name = "Dog" // Error
+
+class Bird extends Animal {
+  fly(distanceInMeters: number) {
+    console.log(`${this.name} flew ${distanceInMeters}m.`)
+  }
+}
