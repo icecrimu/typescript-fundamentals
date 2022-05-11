@@ -179,3 +179,25 @@ if (typeof exampleUnknown == "string") {
 if (typeof exampleUnknown == "boolean") {
   let unknownSetBool: boolean = exampleUnknown
 }
+
+// Javascript to TypeScript
+
+function loadString() {
+  // ....
+}
+
+function loadNumber() {
+  // ....
+}
+
+let someLegacyVariable: unknown
+
+someLegacyVariable = loadString()
+if (typeof someLegacyVariable == "string") {
+  console.log(someLegacyVariable.trim())
+}
+
+someLegacyVariable = loadNumber()
+if (typeof someLegacyVariable == "number") {
+  console.log(someLegacyVariable.toFixed(2))
+}
