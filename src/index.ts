@@ -201,3 +201,14 @@ someLegacyVariable = loadNumber()
 if (typeof someLegacyVariable == "number") {
   console.log(someLegacyVariable.toFixed(2))
 }
+
+// Universal Utilities
+function logAny(value: unknown) {
+  if (typeof value == "number") {
+    console.log(value.toFixed(2))
+  } else {
+    console.log(value)
+  }
+}
+logAny(123.456)
+logAny("Hello world!")
