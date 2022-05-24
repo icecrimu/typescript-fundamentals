@@ -222,3 +222,15 @@ let printHello = load()
 
 const trimmed = (hello as string).trim()
 // const trimmed = (<string>hello).trim() <string> will not work in .tsx
+
+// Type Casting
+
+let leet
+
+leet = '1234'
+
+// Use as number
+const number = +leet
+
+console.log(number === 1234) // true
+console.log(number) // 1234
