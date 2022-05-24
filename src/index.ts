@@ -1,13 +1,13 @@
 let isPresent: boolean = false
 let magin: number = 66.6
-let hello: string = "world"
+let hello: string = 'world'
 
 let notDefined: undefined = undefined
 let notPresent: null = null
 
-let penta: symbol = Symbol("start")
+let penta: symbol = Symbol('start')
 // let biggy: bigint = 24n
-let regexp: RegExp = new RegExp("ab+c")
+let regexp: RegExp = new RegExp('ab+c')
 
 let array: Array<number> = [1, 2, 3]
 
@@ -70,7 +70,7 @@ function add(a: number, b: number): number {
 }
 
 function log(message: string): void {
-  console.log("LOG:", message)
+  console.log('LOG:', message)
 }
 
 function sum(...values: number[]) {
@@ -94,8 +94,8 @@ addNum = function (a: number, b: number): number {
 type User = { id: string }
 type Product = { id: string }
 
-let user: User = { id: "user-asfedfk" }
-let product: Product = { id: "product-dklfdj" }
+let user: User = { id: 'user-asfedfk' }
+let product: Product = { id: 'product-dklfdj' }
 
 user = product
 // product = user
@@ -126,7 +126,7 @@ class Animal {
   }
 }
 
-let cat = new Animal("Cat")
+let cat = new Animal('Cat')
 
 cat.move(10)
 // cat.name = "Dog" // Error
@@ -161,22 +161,22 @@ let exampleUnknown: unknown
 
 // any
 exampleAny = 123
-exampleAny = "Hello"
+exampleAny = 'Hello'
 
 // unknown
 exampleUnknown = 123
-exampleUnknown = "World"
+exampleUnknown = 'World'
 
 // any
 exampleAny.allows.anything.you.can.imagine()
 let anySetBool: boolean = exampleAny
 
 // unknown
-if (typeof exampleUnknown == "string") {
+if (typeof exampleUnknown == 'string') {
   exampleUnknown.trim()
 }
 
-if (typeof exampleUnknown == "boolean") {
+if (typeof exampleUnknown == 'boolean') {
   let unknownSetBool: boolean = exampleUnknown
 }
 
@@ -193,22 +193,32 @@ function loadNumber() {
 let someLegacyVariable: unknown
 
 someLegacyVariable = loadString()
-if (typeof someLegacyVariable == "string") {
+if (typeof someLegacyVariable == 'string') {
   console.log(someLegacyVariable.trim())
 }
 
 someLegacyVariable = loadNumber()
-if (typeof someLegacyVariable == "number") {
+if (typeof someLegacyVariable == 'number') {
   console.log(someLegacyVariable.toFixed(2))
 }
 
 // Universal Utilities
 function logAny(value: unknown) {
-  if (typeof value == "number") {
+  if (typeof value == 'number') {
     console.log(value.toFixed(2))
   } else {
     console.log(value)
   }
 }
 logAny(123.456)
-logAny("Hello world!")
+logAny('Hello world!')
+
+// Type Assertions
+function load() {
+  return 'Hello'
+}
+
+let printHello = load()
+
+const trimmed = (hello as string).trim()
+// const trimmed = (<string>hello).trim() <string> will not work in .tsx
