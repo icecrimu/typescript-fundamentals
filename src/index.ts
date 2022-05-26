@@ -234,3 +234,6 @@ const number = +leet
 
 console.log(number === 1234) // true
 console.log(number) // 1234
+
+// Type Declaration
+console.log('Logged in user:', process.env.USER)
