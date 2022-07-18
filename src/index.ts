@@ -250,3 +250,8 @@ const mainAsync = async () => {
 }
 
 mainAsync()
+
+// ts-node
+// npx ts-node src/index.ts
+// optional -- intsall ts node package
+// npm i ts-node
